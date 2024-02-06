@@ -8,7 +8,7 @@ const axios = require('axios');
 const moment = require('moment');
 require('moment-timezone');
 
-const { usdt, api, sec, timegap, is_test, bithumb_key, bithumb_sec, krw} = process.env;
+const { is_test, bithumb_key, bithumb_sec, krw} = process.env;
 const discordWebhookUrl = 'https://discord.com/api/webhooks/1193042585430786088/1pxsYW9AkUv9obpcVd3mmdtIySNX9HyhyLlQclOsVYvGJ1gOkH_az4ToHuKS4uT8GzOq';
 
 log(`Notice notifying bot is running... ${getTime()}\nKRW : ₩${krw}\nTEST MODE : ${is_test}`);
@@ -19,7 +19,6 @@ axios.post(discordWebhookUrl, {
   console.error('Error sending Discord notification', err);
 });
 
-validate();
 log('The bot is waiting for a new coin to be listed and search if the coin is listed in Binance USDT market.');
 log('When detected, the bot automatically trades as per the configuration.');
 

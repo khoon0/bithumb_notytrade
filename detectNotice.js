@@ -36,7 +36,7 @@ const getLastNoticeInfoPC = async (test = false) => {
                 const link = baseURL + id; // 링크 생성
                 // 현재 시간 (UTC)에 9시간 더하기
                 return {
-                    title: test ? `[[마켓 추가] 트론(TRX) 원화 마켓 추가 pc](${link})` : `[${title}](${link})`, // 제목에 하이퍼링크 추가
+                    title: test ? `[[이벤트] 트론(TRX) 에어드랍 이벤트 pc](${link})` : `[${title}](${link})`, // 제목에 하이퍼링크 추가
                     id: test ? 1000000 : id,
                 }
             }
