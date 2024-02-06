@@ -19,8 +19,9 @@ axios.post(discordWebhookUrl, {
   console.error('Error sending Discord notification', err);
 });
 
-log('The bot is waiting for a new coin to be listed and search if the coin is listed in Binance USDT market.');
-log('When detected, the bot automatically trades as per the configuration.');
+log('빗썸 공지사항 크롤링을 시작합니다.');
+log('공지사항에 기재된 코인 심볼을 추출하여 매수 주문을 진행합니다.');
+
 
 // startWS(); //이거는 바이낸스 신규 상장 감지
 startBithumbDetectPC();
